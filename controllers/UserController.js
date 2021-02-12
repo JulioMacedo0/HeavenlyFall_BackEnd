@@ -26,4 +26,9 @@ router.post('/save', async (req, res) => {
     }
 });
 
+router.get('/record', async (req, res) => { 
+  let response = await User.find({}, {user:1, points:1, _id:0})
+   res.status(200).send({ response })
+}),
+
 module.exports = app => app.use('/user', router)
