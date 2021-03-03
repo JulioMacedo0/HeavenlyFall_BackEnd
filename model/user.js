@@ -5,7 +5,7 @@ const UserSchema = new mongoose.Schema({
         type: String,
     },
     points: {
-        type: String
+        type: Number
     },
     date: {
         type: Date,

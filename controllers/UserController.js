@@ -27,7 +27,7 @@ router.post('/save', async (req, res) => {
 });
 
 router.get('/record', async (req, res) => {
-  let response = await User.find({}, { user: 1, points: 1, _id: 0, date: 1 }).sort({points: -1})
+  let response = await User.find({}, { user: 1, points: 1, _id: 0, date: 1 }).sort( { points: -1 } )
   res.status(200).send({ response })
 }),
 
